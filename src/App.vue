@@ -6,41 +6,55 @@
         <span class="title font-weight-light ml-2">Açaiteria & Hot Bread</span>
       </v-toolbar-title>
       <v-spacer></v-spacer>
-      <v-row align="center" style="max-width: 350px" class="mr-1">
+      <!-- <v-row align="center" style="max-width: 350px" class="mr-1">
         <v-text-field placeholder="Pesquisar" single-line append-icon="mdi-magnify" color="white" hide-details></v-text-field>
-      </v-row>
+      </v-row> -->
     </v-app-bar>
 
     <v-content class="primary">
-      <!--  <v-container fluid >
-        <h1 class="title font-weight-light">Home</h1>
-        <v-card class="px-3 my-3" color="white" light v-for="projeto in projetos" :key="projeto.titulo">
-          <v-layout row wrap :class="`projeto ${projeto.status}`">
-            <v-flex xs12 md5>
-              <v-card-title class="caption font-weight-black grey--text">Título</v-card-title>
-              <v-card-text>{{projeto.titulo}}</v-card-text>
-            </v-flex>
-            <v-flex xs6 sm4 md3>
-              <v-card-title class="caption font-weight-black grey--text">Pessoa</v-card-title>
-              <v-card-text>{{projeto.pessoa}}</v-card-text>
-            </v-flex>
-            <v-flex xs6 sm4 md2>
-              <v-card-title class="caption font-weight-black grey--text">Prazo</v-card-title>
-              <v-card-text>{{projeto.prazo}}</v-card-text>
-            </v-flex>
-            <v-flex xs6 sm4 md2>
-              <v-card-title class="caption font-weight-black grey--text">Status</v-card-title>
-              <v-card-text>{{projeto.status}}</v-card-text>
-            </v-flex>
-          </v-layout>
-        </v-card>
-      </v-container> -->
-
       <v-container fluid>
-
         <v-layout row>
 
-          <!-- <v-flex xs6 class="px-3">
+          <v-flex sm12 md6 class="pa-3">
+            <v-card color="white" light>
+              <v-card-title class="title font-weight-bold warning--text">
+                Açaí e cremes na tigela
+                <v-spacer></v-spacer>
+                <v-text-field v-model="pesquisaTabela01" append-icon="mdi-magnify" label="Pesquisar" single-line hide-details></v-text-field>
+              </v-card-title>
+              <v-data-table :headers="cabecalhoTabela01" :items="tabela01" :search="pesquisaTabela01" hide-default-footer :items-per-page="tabela01.length"></v-data-table>
+            </v-card>
+          </v-flex>
+
+          <v-flex sm12 md6 class="pa-3">
+            <v-card color="white" light>
+              <v-card-text class="title font-weight-bold warning--text pt-5">
+                Açaí no copo
+              </v-card-text>
+              <v-data-table :headers="cabecalhoTabela02" :items="tabela02" hide-default-footer :items-per-page="tabela02.length"></v-data-table>
+              <v-card-text class="caption font-weight-medium warning--text pt-1">
+                <v-divider class="pb-3"></v-divider>
+                <div>Escolha 3 acompanhamentos para 300 ml</div>
+                <div>Escolha 4 acompanhamentos para 500 ml</div>
+                <div>Escolha 6 acompanhamentos para 700 ml</div>
+                <div class="pb-2 pt-2 black--text body-2 font-weight-bold">
+                  Leite ninho, Granola, Sucrilhos, Aveia, Flocos de arroz, Farinha láctea, Chocoball, Amendoim, Paçoca, Banana, Morango, Kiwi
+                </div>
+                <v-divider class="pb-3"></v-divider>
+                <div>Escolha 2 caldas</div>
+                <div class="pb-2 pt-2 black--text body-2 font-weight-bold">
+                  Morango, Chocolate, Kiwi, Mel, Leite condensado
+                </div>
+              </v-card-text>
+            </v-card>
+          </v-flex>
+
+          
+        </v-layout>
+
+        <!-- <v-layout row> -->
+
+        <!-- <v-flex xs6 class="px-3">
             <v-card color="white" light>
               <v-layout row>
                 <v-card-text>
@@ -65,7 +79,7 @@
             </v-card>
           </v-flex> -->
 
-          <v-flex xs6 class="px-3">
+        <!-- <v-flex xs6 class="px-3">
             <v-card color="white" light>
               <v-layout row>
                 <v-flex xs12 class="mx-3">
@@ -85,7 +99,7 @@
             </v-card>
           </v-flex>
 
-        </v-layout>
+        </v-layout> -->
 
       </v-container>
     </v-content>
@@ -94,65 +108,71 @@
 
 <script>
 export default {
-  components: {},
   data() {
     return {
-      projetos: [
+      pesquisaTabela01: "",
+      cabecalhoTabela01: [
         {
-          titulo: "Desenvolver um novo website",
-          pessoa: "Cledson Medeiros",
-          prazo: "01/11/2019",
-          status: "finalizado"
+          text: "Sabor",
+          align: "left",
+          sortable: false,
+          value: "nome"
+        },
+        { text: "250 g", value: "preco250" },
+        { text: "500 g", value: "preco500" },
+        { text: "750 g", value: "preco750" }
+      ],
+      tabela01: [
+        {
+          nome: "Açai Tradicional",
+          preco250: "R$10,00",
+          preco500: "R$13,00",
+          preco750: "R$20,00"
         },
         {
-          titulo: "Criar homepage",
-          pessoa: "Cledson Medeiros",
-          prazo: "01/09/2019",
-          status: "finalizado"
+          nome: "Açai Banana",
+          preco250: "R$10,00",
+          preco500: "R$13,00",
+          preco750: "R$20,00"
         },
         {
-          titulo: "Criar arte de thumbnails",
-          pessoa: "Cledson Medeiros",
-          prazo: "01/09/2019",
-          status: "finalizado"
+          nome: "Açai Morango",
+          preco250: "R$10,00",
+          preco500: "R$13,00",
+          preco750: "R$20,00"
         },
         {
-          titulo: "Desenvolver fórum da comunidade",
-          pessoa: "Cledson Medeiros",
-          prazo: "01/12/2019",
-          status: "finalizado"
+          nome: "Creme de Pitaya",
+          preco250: "R$11,00",
+          preco500: "R$14,00",
+          preco750: "R$21,00"
         },
         {
-          titulo: "Entregar trabalho da faculdade",
-          pessoa: "Cledson Medeiros",
-          prazo: "17/09/2019",
-          status: "finalizado"
+          nome: "Creme de Cupuaçu",
+          preco250: "R$10,00",
+          preco500: "R$13,00",
+          preco750: "R$20,00"
+        },
+        {
+          nome: "Creme Energético",
+          preco250: "R$9,00",
+          preco500: "R$12,00",
+          preco750: "R$19,00"
         }
-      ]
+      ],
+      cabecalhoTabela02: [
+        { text: "300 ml", sortable: false, value: "preco300" },
+        { text: "500 ml", sortable: false, value: "preco500" },
+        { text: "700 ml", sortable: false, value: "preco700" }
+      ],
+      tabela02: [
+        {
+          preco300: "R$13,50",
+          preco500: "R$16,50",
+          preco700: "R$25,50"
+        },
+      ],
     };
   }
 };
 </script>
-<style>
-.projeto.finalizado {
-  border-left: 4px solid orange;
-}
-.projeto.pendente {
-  border-left: 4px solid orange;
-}
-.projeto.atrasado {
-  border-left: 4px solid tomato;
-}
-/* .theme--light.v-chip:not(.v-chip--active) {
-  background: #e0e0e0;
-} */
-/* .v-chip.finalizado {
-  color: #3cd1c2;
-}
-.v-chip.pendente {
-  background: orange;
-}
-.v-chip.atrasado {
-  background: tomato;
-} */
-</style>
