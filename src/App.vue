@@ -11,8 +11,8 @@
       </v-row>
     </v-app-bar>
 
-    <!-- <v-content class="primary">
-      <v-container fluid >
+    <v-content class="primary">
+      <!--  <v-container fluid >
         <h1 class="title font-weight-light">Home</h1>
         <v-card class="px-3 my-3" color="white" light v-for="projeto in projetos" :key="projeto.titulo">
           <v-layout row wrap :class="`projeto ${projeto.status}`">
@@ -36,58 +36,58 @@
         </v-card>
       </v-container> -->
 
-    <v-container fluid>
+      <v-container fluid>
 
-      <v-layout row>
+        <v-layout row>
 
-        <v-flex xs6 class="px-3">
-          <v-card color="white" light>
-            <v-layout row>
-              <v-card-text>
+          <!-- <v-flex xs6 class="px-3">
+            <v-card color="white" light>
+              <v-layout row>
+                <v-card-text>
+                  <v-flex xs12 class="mx-3">
+                    <div class="headline text-uppercase font-weight-bold warning--text">Açaí e cremes na tigela</div>
+                  </v-flex>
+                  <v-flex xs6>
+                    <div class="subtitle-1 text-uppercase font-weight-bold">Escolha seu sabor</div>
+                  </v-flex>
+                  <v-flex xs6>
+                    <div class="subtitle-1 text-uppercase font-weight-bold">Escolha seu sabor</div>
+                  </v-flex>
+                </v-card-text>
+              </v-layout>
+              <v-layout row>
                 <v-flex xs12 class="mx-3">
-                  <div class="headline text-uppercase font-weight-bold warning--text">Açaí e cremes na tigela</div>
+                  <v-card-text>
+                    <div class="subtitle-2 font-weight-light">Açai Tradicional</div>
+                  </v-card-text>
                 </v-flex>
-                <v-flex xs6>
-                  <div class="subtitle-1 text-uppercase font-weight-bold">Escolha seu sabor</div>
+              </v-layout>
+            </v-card>
+          </v-flex> -->
+
+          <v-flex xs6 class="px-3">
+            <v-card color="white" light>
+              <v-layout row>
+                <v-flex xs12 class="mx-3">
+                  <v-card-text>
+                    <div class="headline text-uppercase font-weight-bold warning--text">Açaí no copo</div>
+                    <div class="subtitle-1 text-uppercase font-weight-bold">Escolha seu sabor</div>
+                  </v-card-text>
                 </v-flex>
-                <v-flex xs6>
-                  <div class="subtitle-1 text-uppercase font-weight-bold">Escolha seu sabor</div>
+              </v-layout>
+              <v-layout row>
+                <v-flex xs12 class="mx-3">
+                  <v-card-text>
+                    <div class="subtitle-2 font-weight-light">Açai Tradicional</div>
+                  </v-card-text>
                 </v-flex>
-              </v-card-text>
-            </v-layout>
-            <v-layout row>
-              <v-flex xs12 class="mx-3">
-                <v-card-text>
-                  <div class="subtitle-2 font-weight-light">Açai Tradicional</div>
-                </v-card-text>
-              </v-flex>
-            </v-layout>
-          </v-card>
-        </v-flex>
+              </v-layout>
+            </v-card>
+          </v-flex>
 
-        <v-flex xs6 class="px-3">
-          <v-card color="white" light>
-            <v-layout row>
-              <v-flex xs12 class="mx-3">
-                <v-card-text>
-                  <div class="headline text-uppercase font-weight-bold warning--text">Açaí no copo</div>
-                  <div class="subtitle-1 text-uppercase font-weight-bold">Escolha seu sabor</div>
-                </v-card-text>
-              </v-flex>
-            </v-layout>
-            <v-layout row>
-              <v-flex xs12 class="mx-3">
-                <v-card-text>
-                  <div class="subtitle-2 font-weight-light">Açai Tradicional</div>
-                </v-card-text>
-              </v-flex>
-            </v-layout>
-          </v-card>
-        </v-flex>
+        </v-layout>
 
-      </v-layout>
-
-    </v-container>
+      </v-container>
     </v-content>
   </v-app>
 </template>
