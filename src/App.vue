@@ -49,54 +49,54 @@ export default {
           titulo: "Açaí e cremes na tigela",
           link: "/acaiecremesnatigela"
         },
-        {
-          titulo: "Açaí tropical",
-          link: "/acaitropical"
-        },
+        // {
+        //   titulo: "Açaí tropical",
+        //   link: "/acaitropical"
+        // },
         {
           titulo: "Açaí no copo",
           link: "/acainocopo"
         },
-        {
-          titulo: "Açaí kids",
-          link: "/acaikids"
-        },
-        {
-          titulo: "Açaí na tigela",
-          link: "/acaitigela"
-        },
-        {
-          titulo: "Hot bread",
-          link: "/hotbread"
-        },
-        {
-          titulo: "Tapiocas",
-          link: "/tapiocas"
-        },
-        {
-          titulo: "Sanduíches naturais",
-          link: "/sanduichesnaturais"
-        },
-        {
-          titulo: "Sopas fit",
-          link: "/sopasfit"
-        },
-        {
-          titulo: "Sucos naturais",
-          link: "/sucosnaturais"
-        },
-        {
-          titulo: "Sucos polpa",
-          link: "/sucospolpa"
-        },
-        {
-          titulo: "Sucos mix açaí",
-          link: "/sucosmixacai"
-        },
-        {
-          titulo: "Bebidas",
-          link: "/bebidas"
-        },
+        // {
+        //   titulo: "Açaí kids",
+        //   link: "/acaikids"
+        // },
+        // {
+        //   titulo: "Açaí na tigela",
+        //   link: "/acaitigela"
+        // },
+        // {
+        //   titulo: "Hot bread",
+        //   link: "/hotbread"
+        // },
+        // {
+        //   titulo: "Tapiocas",
+        //   link: "/tapiocas"
+        // },
+        // {
+        //   titulo: "Sanduíches naturais",
+        //   link: "/sanduichesnaturais"
+        // },
+        // {
+        //   titulo: "Sopas fit",
+        //   link: "/sopasfit"
+        // },
+        // {
+        //   titulo: "Sucos naturais",
+        //   link: "/sucosnaturais"
+        // },
+        // {
+        //   titulo: "Sucos polpa",
+        //   link: "/sucospolpa"
+        // },
+        // {
+        //   titulo: "Sucos mix açaí",
+        //   link: "/sucosmixacai"
+        // },
+        // {
+        //   titulo: "Bebidas",
+        //   link: "/bebidas"
+        // },
       ],
     };
   }
