@@ -6,8 +6,23 @@ Vue.use(VueRouter)
 const routes = [
   {
     path: '/',
-    name: 'Home',
-    component: () => import(/* webpackChunkName: "about" */ '../views/Home.vue')
+    name: 'MenuCompleto',
+    component: () => import(/* webpackChunkName: "about" */ '../views/MenuCompleto.vue')
+  },
+  {
+    path: '/acaiecremesnatigela',
+    name: 'AcaiECremesNaTigela',
+    component: () => import(/* webpackChunkName: "about" */ '../views/AcaiECremesNaTigela.vue')
+  },
+  {
+    path: '*/',
+    name: '404',
+    component: () => import(/* webpackChunkName: "about" */ '../views/MenuCompleto.vue'),
+  },
+  {
+    path: '/acainocopo',
+    name: 'AcaiNoCopo',
+    component: () => import(/* webpackChunkName: "about" */ '../views/AcaiNoCopo.vue')
   },
 ]
 
