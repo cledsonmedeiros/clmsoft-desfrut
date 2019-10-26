@@ -46,6 +46,14 @@ export default {
           titulo: "Página 01",
           link: "/pagina01"
         },
+        {
+          titulo: "Página 02",
+          link: "/pagina02"
+        },
+        {
+          titulo: "Página 03",
+          link: "/pagina03"
+        },
         // {
         //   titulo: "Açaí e cremes na tigela",
         //   link: "/acaiecremesnatigela"
