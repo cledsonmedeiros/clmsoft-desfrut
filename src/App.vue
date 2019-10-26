@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <v-app-bar app clipped-left hide-on-scroll class="secondary" dense>
+    <v-app-bar app  clipped-left hide-on-scroll class="secondary" dense>
       <v-app-bar-nav-icon dark @click.stop="menu = !menu"></v-app-bar-nav-icon>
       <v-toolbar-title class="mr-12 align-center">
         <span class="title">Desfrut</span>
