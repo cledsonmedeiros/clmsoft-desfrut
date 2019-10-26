@@ -90,7 +90,7 @@
 
 <script>
 export default {
-  name: "MenuCompleto",
+  name: "Page01",
   data() {
     return {
       AlturaCardAcaiCremesTigela: 0,
@@ -333,6 +333,7 @@ export default {
   },
   mounted: function() {
     this.AlturaCardAcaiCremesTigela = 0;
+    this.AlturaCardChocolates = 0;
     this.fixAlturaCardAcaiCopo();
     this.fixAlturaCardsVizinhosChocolate();
   },
