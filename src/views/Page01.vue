@@ -114,7 +114,7 @@
                 Caldas
               </v-flex>
               <v-flex xs12 sm6>
-                <v-text-field v-model="pesquisaGraos" append-icon="mdi-magnify" label="Pesquisar" style="padding: 0px" single-line hide-details></v-text-field>
+                <v-text-field v-model="pesquisaCaldas" append-icon="mdi-magnify" label="Pesquisar" style="padding: 0px" single-line hide-details></v-text-field>
               </v-flex>
             </v-layout>
             <v-card-text class="caption font-weight-medium warning--text pt-1" style="padding: 0px">
@@ -122,6 +122,38 @@
             </v-card-text>
           </v-card-title>
           <v-data-table :headers="cabecalhoCaldas" :items="tabelaCaldas" :search="pesquisaCaldas" hide-default-footer :items-per-page="tabelaCaldas.length"></v-data-table>
+        </v-card>
+      </v-flex>
+
+      <v-flex xs12 sm6>
+        <v-card color="white" light>
+          <v-card-title class="title font-weight-bold warning--text">
+            <v-layout row wrap>
+              <v-flex xs12 sm6>
+                Açaí tropical
+              </v-flex>
+              <v-flex xs12 sm6>
+                <v-text-field v-model="pesquisaAcaiTropical" append-icon="mdi-magnify" label="Pesquisar" style="padding: 0px" single-line hide-details></v-text-field>
+              </v-flex>
+            </v-layout>
+          </v-card-title>
+          <v-data-table :headers="cabecalhoAcaiTropical" :items="tabelaAcaiTropical" :search="pesquisaAcaiTropical" hide-default-footer :items-per-page="tabelaAcaiTropical.length"></v-data-table>
+        </v-card>
+      </v-flex>
+
+      <v-flex xs12 sm6>
+        <v-card color="white" light>
+          <v-card-title class="title font-weight-bold warning--text">
+            <v-layout row wrap>
+              <v-flex xs12 sm6>
+                Açaí Kids
+              </v-flex>
+              <v-flex xs12 sm6>
+                <v-text-field v-model="pesquisaAcaiKids" append-icon="mdi-magnify" label="Pesquisar" style="padding: 0px" single-line hide-details></v-text-field>
+              </v-flex>
+            </v-layout>
+          </v-card-title>
+          <v-data-table :headers="cabecalhoAcaiKids" :items="tabelaAcaiKids" :search="pesquisaAcaiKids" hide-default-footer :items-per-page="tabelaAcaiKids.length"></v-data-table>
         </v-card>
       </v-flex>
 
@@ -398,7 +430,47 @@ export default {
           nome: "Nutella",
           valor: "R$2,00"
         },
-      ]
+      ],
+      pesquisaAcaiTropical: "",
+      cabecalhoAcaiTropical: [
+        {
+          text: "Item",
+          align: "left",
+          sortable: false,
+          value: "nome"
+        },
+        { text: "Valor", align: "right", sortable: false, value: "valor" }
+      ],
+      tabelaAcaiTropical: [
+        {
+          nome: "Servido no côco verde (Açaí, morango, kiwi, banana e granola) + copo de água de côco",
+          valor: "R$24,50"
+        },
+        {
+          nome: "Servido no abacaxi (Açaí, morango, kiwi, banana e granola) + abacaxi grelhado com açúcar e canela",
+          valor: "R$28,50"
+        },
+      ],
+      pesquisaAcaiKids: "",
+      cabecalhoAcaiKids: [
+        {
+          text: "Item",
+          align: "left",
+          sortable: false,
+          value: "nome"
+        },
+        { text: "Valor", align: "right", sortable: false, value: "valor" }
+      ],
+      tabelaAcaiKids: [
+        {
+          nome: "Açaí feliz (Açaí tradicional 150 g, M&M's, Baton, Flocos de arroz e cobertura)",
+          valor: "R$12,50"
+        },
+        {
+          nome: "Tropicalzinho (Açaí tradicional 150 g, morango, kiwi, banana, granola e leite condensado)",
+          valor: "R$12,50"
+        },
+      ],
     };
   },
   methods: {
