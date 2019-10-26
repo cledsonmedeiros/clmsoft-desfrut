@@ -1,6 +1,6 @@
 <template>
   <v-app id="app">
-    <v-app-bar app clipped-left class="secondary" dense>
+    <v-app-bar app clipped-left hide-on-scroll class="secondary" dense>
       <v-app-bar-nav-icon dark @click.stop="menu = !menu"></v-app-bar-nav-icon>
       <v-toolbar-title class="mr-12 align-center">
         <span class="title">Desfrut</span>
@@ -42,21 +42,21 @@ export default {
       menu: false,
       rotas: [
         {
-          titulo: "Menu completo",
-          link: "/"
+          titulo: "Página 01",
+          link: "/pagina01"
         },
-        {
-          titulo: "Açaí e cremes na tigela",
-          link: "/acaiecremesnatigela"
-        },
+        // {
+        //   titulo: "Açaí e cremes na tigela",
+        //   link: "/acaiecremesnatigela"
+        // },
         // {
         //   titulo: "Açaí tropical",
         //   link: "/acaitropical"
         // },
-        {
-          titulo: "Açaí no copo",
-          link: "/acainocopo"
-        },
+        // {
+        //   titulo: "Açaí no copo",
+        //   link: "/acainocopo"
+        // },
         // {
         //   titulo: "Açaí kids",
         //   link: "/acaikids"

@@ -14,7 +14,7 @@
       </v-flex>
 
       <v-flex xs12 sm6>
-        <v-card color="white" light :min-height="this.calcularAlturaCardAcaiCremesTigela">
+        <v-card color="white" light :min-height="this.AlturaCardAcaiCremesTigela">
           <v-card-text class="title font-weight-bold warning--text pt-5">
             Açaí no copo
           </v-card-text>
@@ -49,7 +49,7 @@
 
       <v-flex xs12 sm6 style="padding: 0">
         <v-flex xs12>
-          <v-card color="white" light :min-height="this.calcularAlturaCardCholates / 2 - 4">
+          <v-card color="white" light :min-height="this.AlturaCardChocolates">
             <v-card-title class="title font-weight-bold warning--text">
               Frutas
               <v-spacer></v-spacer>
@@ -59,7 +59,7 @@
           </v-card>
         </v-flex>
         <v-flex xs12>
-          <v-card color="white" light :min-height="this.calcularAlturaCardCholates / 2 - 4">
+          <v-card color="white" light :min-height="this.AlturaCardChocolates">
             <v-card-title class="title font-weight-bold warning--text">
               Outros
               <v-spacer></v-spacer>
@@ -93,6 +93,8 @@ export default {
   name: "MenuCompleto",
   data() {
     return {
+      AlturaCardAcaiCremesTigela: 0,
+      AlturaCardChocolates: 0,
       pesquisaAcaiCremeTigela: "",
       cabecalhoAcaiCremeTigela: [
         {
@@ -313,13 +315,26 @@ export default {
       ]
     };
   },
-  computed: {
-    calcularAlturaCardAcaiCremesTigela: () => {
-      return document.getElementById("cardAcaiCremesTigela").offsetHeight;
+  methods: {
+    fixAlturaCardAcaiCopo: function() {
+      this.$nextTick(function() {     
+        if(this.AlturaCardAcaiCremesTigela === 0 && document.getElementById("cardAcaiCremesTigela").offsetHeight > 0){
+          this.AlturaCardAcaiCremesTigela = document.getElementById("cardAcaiCremesTigela").offsetHeight;
+        }
+      });
     },
-    calcularAlturaCardCholates: () => {
-      return document.getElementById("cardChocolates").offsetHeight;
+    fixAlturaCardsVizinhosChocolate: function() {
+      this.$nextTick(function() {     
+        if(this.AlturaCardChocolates === 0 && document.getElementById("cardChocolates").offsetHeight > 0){
+          this.AlturaCardChocolates = document.getElementById("cardChocolates").offsetHeight / 2 - 4;
+        }
+      });
     },
-  }
+  },
+  mounted: function() {
+    this.AlturaCardAcaiCremesTigela = 0;
+    this.fixAlturaCardAcaiCopo();
+    this.fixAlturaCardsVizinhosChocolate();
+  },
 };
 </script>
