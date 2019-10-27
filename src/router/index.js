@@ -17,7 +17,7 @@ const routes = [
   {
     path: '/pagina02',
     name: 'Page02',
-    component: () => import(/* webpackChunkName: "about" */ '../views/PageEmConstrucao.vue')
+    component: () => import(/* webpackChunkName: "about" */ '../views/Page02.vue')
   },
   {
     path: '/pagina03',

@@ -175,12 +175,12 @@ export default {
         {
           text: "Sabor",
           align: "left",
-          sortable: false,
+          sortable: true,
           value: "nome"
         },
-        { text: "250 g", align: "center", sortable: false, value: "preco250" },
-        { text: "500 g", align: "center", sortable: false, value: "preco500" },
-        { text: "750 g", align: "right", sortable: false, value: "preco750" }
+        { text: "250 g", align: "center", sortable: true, value: "preco250" },
+        { text: "500 g", align: "center", sortable: true, value: "preco500" },
+        { text: "750 g", align: "right", sortable: true, value: "preco750" }
       ],
       tabelaAcaiCremeTigela: [
         {
@@ -221,9 +221,9 @@ export default {
         }
       ],
       cabecalhoAcaiCopo: [
-        { text: "300 ml", align: "left", sortable: false, value: "preco300" },
-        { text: "500 ml", align: "center", sortable: false, value: "preco500" },
-        { text: "700 ml", align: "right", sortable: false, value: "preco700" }
+        { text: "300 ml", align: "left", sortable: true, value: "preco300" },
+        { text: "500 ml", align: "center", sortable: true, value: "preco500" },
+        { text: "700 ml", align: "right", sortable: true, value: "preco700" }
       ],
       tabelaAcaiCopo: [
         {
@@ -237,10 +237,10 @@ export default {
         {
           text: "Chocolate",
           align: "left",
-          sortable: false,
+          sortable: true,
           value: "nome"
         },
-        { text: "Valor", align: "right", sortable: false, value: "valor" }
+        { text: "Valor", align: "right", sortable: true, value: "valor" }
       ],
       tabelaChocolates: [
         {
@@ -297,10 +297,10 @@ export default {
         {
           text: "Item",
           align: "left",
-          sortable: false,
+          sortable: true,
           value: "nome"
         },
-        { text: "Valor", align: "right", sortable: false, value: "valor" }
+        { text: "Valor", align: "right", sortable: true, value: "valor" }
       ],
       tabelaGraos: [
         {
@@ -337,10 +337,10 @@ export default {
         {
           text: "Fruta",
           align: "left",
-          sortable: false,
+          sortable: true,
           value: "nome"
         },
-        { text: "Valor", align: "right", sortable: false, value: "valor" }
+        { text: "Valor", align: "right", sortable: true, value: "valor" }
       ],
       tabelaFrutas: [
         {
@@ -365,10 +365,10 @@ export default {
         {
           text: "Item",
           align: "left",
-          sortable: false,
+          sortable: true,
           value: "nome"
         },
-        { text: "Valor", align: "right", sortable: false, value: "valor" }
+        { text: "Valor", align: "right", sortable: true, value: "valor" }
       ],
       tabelaOutros: [
         {
@@ -393,10 +393,10 @@ export default {
         {
           text: "Calda",
           align: "left",
-          sortable: false,
+          sortable: true,
           value: "nome"
         },
-        { text: "Valor", align: "right", sortable: false, value: "valor" }
+        { text: "Valor", align: "right", sortable: true, value: "valor" }
       ],
       tabelaCaldas: [
         {
@@ -437,10 +437,10 @@ export default {
         {
           text: "Item",
           align: "left",
-          sortable: false,
+          sortable: true,
           value: "nome"
         },
-        { text: "Valor", align: "right", sortable: false, value: "valor" }
+        { text: "Valor", align: "right", sortable: true, value: "valor" }
       ],
       tabelaAcaiTropical: [
         {
@@ -457,10 +457,10 @@ export default {
         {
           text: "Item",
           align: "left",
-          sortable: false,
+          sortable: true,
           value: "nome"
         },
-        { text: "Valor", align: "right", sortable: false, value: "valor" }
+        { text: "Valor", align: "right", sortable: true, value: "valor" }
       ],
       tabelaAcaiKids: [
         {
