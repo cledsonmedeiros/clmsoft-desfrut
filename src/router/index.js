@@ -22,7 +22,7 @@ const routes = [
   {
     path: '/pagina03',
     name: 'Page03',
-    component: () => import(/* webpackChunkName: "about" */ '../views/PageEmConstrucao.vue')
+    component: () => import(/* webpackChunkName: "about" */ '../views/Page03.vue')
   },
   {
     path: '*/',

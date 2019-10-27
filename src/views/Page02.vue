@@ -58,7 +58,7 @@ export default {
           preco750: "R$23,50"
         },
         {
-          nome: "Anorí",
+          nome: "Anori",
           descricao: "Banana, farinha láctea e leite ninho",
           preco250: "R$15,50",
           preco500: "R$18,50",
