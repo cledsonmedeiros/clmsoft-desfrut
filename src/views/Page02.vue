@@ -72,7 +72,7 @@ export default {
           preco750: "R$22,00"
         },
         {
-          nome: "Anori",
+          nome: "Anori 2",
           descricao: "Banana, castanha de cajú, granola e paçoca",
           preco250: "R$18,00",
           preco500: "R$21,00",
