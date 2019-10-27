@@ -3,7 +3,7 @@
     <v-layout row wrap>
 
       <v-flex xs12 sm6>
-        <v-card id="cardAcaiCremesTigela" color="white" light>
+        <v-card id="cardAcaiCremesTigela" color="white" light :min-height="this.AlturaCardAcaiCremesTigela" >
           <v-card-title class="title font-weight-bold warning--text">
             <v-layout row wrap>
               <v-flex xs12 sm6>
@@ -42,7 +42,7 @@
       </v-flex>
 
       <v-flex xs12 sm6>
-        <v-card id="cardChocolates" color="white" light>
+        <v-card id="cardChocolates" color="white" light :min-height="this.AlturaCardChocolates * 2 + 8">
           <v-card-title class="title font-weight-bold warning--text">
             <v-layout row wrap>
               <v-flex xs12 sm6>
@@ -107,7 +107,7 @@
       </v-flex>
 
       <v-flex xs12 sm6>
-        <v-card id="cardCaldas" color="white" light>
+        <v-card id="cardCaldas" color="white" light :min-height="this.AlturaCardCaldas">
           <v-card-title class="title font-weight-bold warning--text">
             <v-layout row wrap>
               <v-flex xs12 sm6>
@@ -126,7 +126,7 @@
       </v-flex>
 
       <v-flex xs12 sm6>
-        <v-card color="white" light>
+        <v-card color="white" light :min-height="this.AlturaCardAcaiKids">
           <v-card-title class="title font-weight-bold warning--text">
             <v-layout row wrap>
               <v-flex xs12 sm6>
@@ -142,7 +142,7 @@
       </v-flex>
 
       <v-flex xs12 sm6>
-        <v-card color="white" light>
+        <v-card id="cardAcaiKids" color="white" light :min-height="this.AlturaCardAcaiKids">
           <v-card-title class="title font-weight-bold warning--text">
             <v-layout row wrap>
               <v-flex xs12 sm6>
@@ -169,6 +169,7 @@ export default {
       AlturaCardAcaiCremesTigela: 0,
       AlturaCardChocolates: 0,
       AlturaCardCaldas: 0,
+      AlturaCardAcaiKids: 0,
       pesquisaAcaiCremeTigela: "",
       cabecalhoAcaiCremeTigela: [
         {
@@ -520,6 +521,21 @@ export default {
         }
       });
     },
+    fixAlturaCardAcaiKids: function() {
+      this.$nextTick(function() {
+        if (
+          this.AlturaCardAcaiKids === 0 &&
+          document.getElementById("cardAcaiKids").offsetHeight > 0
+        ) {
+          if (this.isMobile()) {
+            this.AlturaCardAcaiKids = 0;
+          } else {
+            this.AlturaCardAcaiKids =
+              document.getElementById("cardAcaiKids").offsetHeight;
+          }
+        }
+      });
+    },
     isMobile() {
       if (
         /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
@@ -538,6 +554,7 @@ export default {
     this.fixAlturaCardAcaiCopo();
     this.fixAlturaCardsVizinhosChocolate();
     this.fixAlturaCardGraos();
+    this.fixAlturaCardAcaiKids();
   }
 };
 </script>
