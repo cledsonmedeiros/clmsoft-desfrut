@@ -3,7 +3,7 @@
     <v-layout row wrap>
 
       <v-flex xs12 sm6>
-        <v-card id="cardAcaiCremesTigela" color="white" light :min-height="this.AlturaCardAcaiCremesTigela" >
+        <v-card id="cardAcaiCremesTigela" color="white" light :min-height="this.AlturaCardAcaiCremesTigela">
           <v-card-title class="title font-weight-bold warning--text">
             <v-layout row wrap>
               <v-flex xs12 sm6>
@@ -430,7 +430,7 @@ export default {
         {
           nome: "Nutella",
           valor: "R$2,00"
-        },
+        }
       ],
       pesquisaAcaiTropical: "",
       cabecalhoAcaiTropical: [
@@ -444,13 +444,15 @@ export default {
       ],
       tabelaAcaiTropical: [
         {
-          nome: "Servido no côco verde (Açaí, morango, kiwi, banana e granola) + copo de água de côco",
+          nome:
+            "Servido no côco verde (Açaí, morango, kiwi, banana e granola) + copo de água de côco",
           valor: "R$24,50"
         },
         {
-          nome: "Servido no abacaxi (Açaí, morango, kiwi, banana e granola) + abacaxi grelhado com açúcar e canela",
+          nome:
+            "Servido no abacaxi (Açaí, morango, kiwi, banana e granola) + abacaxi grelhado com açúcar e canela",
           valor: "R$28,50"
-        },
+        }
       ],
       pesquisaAcaiKids: "",
       cabecalhoAcaiKids: [
@@ -464,14 +466,16 @@ export default {
       ],
       tabelaAcaiKids: [
         {
-          nome: "Açaí feliz (Açaí tradicional 150 g, M&M's, Baton, Flocos de arroz e cobertura)",
+          nome:
+            "Açaí feliz (Açaí tradicional 150 g, M&M's, Baton, Flocos de arroz e cobertura)",
           valor: "R$12,50"
         },
         {
-          nome: "Tropicalzinho (Açaí tradicional 150 g, morango, kiwi, banana, granola e leite condensado)",
+          nome:
+            "Tropicalzinho (Açaí tradicional 150 g, morango, kiwi, banana, granola e leite condensado)",
           valor: "R$12,50"
-        },
-      ],
+        }
+      ]
     };
   },
   methods: {
@@ -515,8 +519,9 @@ export default {
           if (this.isMobile()) {
             this.AlturaCardCaldas = 0;
           } else {
-            this.AlturaCardCaldas =
-              document.getElementById("cardCaldas").offsetHeight;
+            this.AlturaCardCaldas = document.getElementById(
+              "cardCaldas"
+            ).offsetHeight;
           }
         }
       });
@@ -530,8 +535,9 @@ export default {
           if (this.isMobile()) {
             this.AlturaCardAcaiKids = 0;
           } else {
-            this.AlturaCardAcaiKids =
-              document.getElementById("cardAcaiKids").offsetHeight;
+            this.AlturaCardAcaiKids = document.getElementById(
+              "cardAcaiKids"
+            ).offsetHeight;
           }
         }
       });

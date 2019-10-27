@@ -334,7 +334,7 @@ export default {
         {
           nome: "Laranja",
           valor: "R$8,50"
-        },
+        }
       ],
       pesquisaSucosPolpa: "",
       cabecalhoSucosPolpa: [
