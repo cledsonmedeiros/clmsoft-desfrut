@@ -18,7 +18,7 @@
 
       <v-divider></v-divider>
 
-      <v-list dense rounded="">
+      <v-list dense rounded>
         <v-list-item-group v-for="rota in rotas" :key="rota.titulo" link>
           <v-list-item :to="rota.link">
             <v-list-item-content>
@@ -56,6 +56,6 @@ export default {
         },
       ],
     };
-  }
+  },
 };
 </script>
